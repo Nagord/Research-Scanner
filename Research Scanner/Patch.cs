@@ -5,25 +5,29 @@ using System.Collections.Generic;
 
 namespace Research_Scanner
 {
-    [HarmonyPatch(typeof(PLServer), "NetworkedStartEnhancedEMScan")]
+    [HarmonyPatch(typeof(PLShipInfoBase), "NetworkedStartEnhancedEMScan")]
     class Patch
     {
-        static void Postfix(ref int shipID)
+        static void Postfix(PLShipInfoBase __instance)
         {
-            if (shipID == PLEncounterManager.Instance.PlayerShip.ShipID && PhotonNetwork.isMasterClient)
+            if (__instance.GetIsPlayerShip() && PhotonNetwork.isMasterClient)
             {
-                bool hasfoundresearch = false;
+                int foundresearchcount = 0;
                 foreach (KeyValuePair<ObscuredInt, ObscuredBool> MyResearch in PLEncounterManager.Instance.GetCurrentPersistantEncounterInstance().MyPersistantData.ProbePickupPersistantData)
                 {
-                    if (MyResearch.Value)
+                    if (!MyResearch.Value)
                     {
-                        hasfoundresearch = true;
-                        break;
+                        //Logger.Info("found research");
+                        foundresearchcount++;
                     }
                 }
-                if (hasfoundresearch)
+                if (foundresearchcount > 1)
                 {
-                    Messaging.Notification("Scanner has found research!", PhotonTargets.All);
+                    Messaging.Notification("High anomalous signature detected.", PhotonTargets.All);
+                }
+                else if (foundresearchcount > 0)
+                {
+                    Messaging.Notification("Low anomalous signature detected.", PhotonTargets.All);
                 }
             }
         }
