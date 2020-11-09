@@ -38,7 +38,7 @@ namespace Enhanced_EM_Scanner
                 {
                     Messaging.Notification("Anomaly detected: Low Signature", PhotonTargets.All);
                 }
-                if(foundscrapcount > 1)
+                if(foundscrapcount > 2)
                 {
                     Messaging.Notification($"Debris detected: High Signature", PhotonTargets.All);
                 }
