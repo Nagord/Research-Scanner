@@ -1,6 +1,6 @@
 ﻿using PulsarPluginLoader;
 
-namespace Research_Scanner
+namespace Enhanced_EM_Scanner
 {
     public class Plugin : PulsarPlugin
     {
@@ -12,7 +12,9 @@ namespace Research_Scanner
 
         public override int MPFunctionality => (int)MPFunction.HostOnly;
 
-        public override string ShortDescription => "Helps detect research via EM scans.";
+        public override string ShortDescription => "Enhances EM Scanner capabilities to include research and space scrap detection";
+
+        public override string LongDescription => "Provides a notification for space research and space scrap after the completion of an EM scan. Anomaly Detected: {Low/High} signature. Debris Detected: {Low/High} signature";
 
         public override string HarmonyIdentifier()
         {

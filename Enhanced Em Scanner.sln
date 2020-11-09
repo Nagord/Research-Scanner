@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30128.36
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Research Scanner", "Research Scanner\Research Scanner.csproj", "{F6E045CF-227A-4EED-AEEC-01EE62C2B929}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enhanced Em Scanner", "Research Scanner\Enhanced Em Scanner.csproj", "{F6E045CF-227A-4EED-AEEC-01EE62C2B929}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
