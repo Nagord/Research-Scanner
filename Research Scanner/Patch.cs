@@ -3,7 +3,7 @@ using HarmonyLib;
 using PulsarPluginLoader.Utilities;
 using System.Collections.Generic;
 
-Anamespace Enhanced_EM_Scanner
+namespace Enhanced_EM_Scanner
 {
     [HarmonyPatch(typeof(PLShipInfoBase), "NetworkedStartEnhancedEMScan")]
     class Patch
