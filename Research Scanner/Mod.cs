@@ -1,14 +1,14 @@
-﻿using PulsarPluginLoader;
+﻿using PulsarModLoader;
 
 namespace Enhanced_EM_Scanner
 {
-    public class Plugin : PulsarPlugin
+    public class Mod : PulsarMod
     {
-        public override string Version => "1.0.0";
+        public override string Version => "1.0.1";
 
         public override string Author => "Dragon";
 
-        public override string Name => "ResearchScanner";
+        public override string Name => "Enhanced EM Scanner";
 
         public override int MPFunctionality => (int)MPFunction.HostOnly;
 
@@ -18,7 +18,7 @@ namespace Enhanced_EM_Scanner
 
         public override string HarmonyIdentifier()
         {
-            return "Dragon.ResearchScanner";
+            return "Dragon.EnhancedEMScanner";
         }
     }
 }

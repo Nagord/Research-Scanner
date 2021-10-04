@@ -1,6 +1,6 @@
 ﻿using CodeStage.AntiCheat.ObscuredTypes;
 using HarmonyLib;
-using PulsarPluginLoader.Utilities;
+using PulsarModLoader.Utilities;
 using System.Collections.Generic;
 
 namespace Enhanced_EM_Scanner
